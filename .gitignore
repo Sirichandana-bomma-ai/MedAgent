@@ -1,0 +1,25 @@
+# Ignore virtual environment
+rag_env/
+venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment and secrets
+.env
+*.env
+.streamlit/secrets.toml
+
+# Ignore build artifacts
+*.log
+.DS_Store
+
+# Ignore Jupyter files
+.ipynb_checkpoints/
+
+# Ignore system files
+Thumbs.db
+
