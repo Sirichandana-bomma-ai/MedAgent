@@ -1,3 +1,16 @@
+import os
+
+# Load keys from Streamlit Secrets into environment variables
+if "TOGETHER_API_KEY" in st.secrets:
+    os.environ["TOGETHER_API_KEY"] = st.secrets["TOGETHER_API_KEY"]
+
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+
+if "HUGGINGFACEHUB_API_TOKEN" in st.secrets:
+    os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
+
+
 import streamlit as st
 from rag_assistant import RAGAssistant
 from database import VectorDB
