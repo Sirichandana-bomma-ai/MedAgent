@@ -17,7 +17,7 @@ if "HUGGINGFACEHUB_API_TOKEN" in st.secrets:
 
 
 st.set_page_config(page_title="🩺 Medical RAG Assistant", layout="wide")
-st.title("🩺 Medical RAG Assistant (with Context & Citations)")
+st.title("🩺 Medical RAG Assistant")
 
 if 'memory' not in st.session_state:
     st.session_state.memory = MemoryAgent()
