@@ -1,4 +1,8 @@
 import os
+import streamlit as st
+from rag_assistant import RAGAssistant
+from database import VectorDB
+from memory_agent import MemoryAgent
 
 # Load keys from Streamlit Secrets into environment variables
 if "TOGETHER_API_KEY" in st.secrets:
@@ -11,10 +15,6 @@ if "HUGGINGFACEHUB_API_TOKEN" in st.secrets:
     os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 
-import streamlit as st
-from rag_assistant import RAGAssistant
-from database import VectorDB
-from memory_agent import MemoryAgent
 
 st.set_page_config(page_title="🩺 Medical RAG Assistant", layout="wide")
 st.title("🩺 Medical RAG Assistant (with Context & Citations)")
